@@ -1,0 +1,17 @@
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    li {
+        border-top: 1px dotted rgb(211, 210, 210);
+        height: 25px;
+        width: 100%;
+        padding-left: 50px;
+        &:last-child {
+            border-bottom: 1px dotted rgb(211, 210, 210);
+        }
+    }
+}

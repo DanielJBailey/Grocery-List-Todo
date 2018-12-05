@@ -1,0 +1,31 @@
+.new-item {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    input[name = 'name'], input[name='quantity'] {
+        background-color: #f5f5f5;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        height: 25px;
+        padding: 20px 10px;
+        border-radius: 5px;
+        color: rgba(0,0,0,0.8);
+        margin-top: 10px;
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+    input[type = 'submit'] {
+        margin-top: 10px;
+        background-color: green;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+}

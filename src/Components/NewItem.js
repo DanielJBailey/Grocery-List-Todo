@@ -5,7 +5,7 @@ import '../Styles/NewItem.scss';
 class NewItem extends React.Component {
     state = { 
         name: '',
-        quantity: 1
+        quantity: 0
     }
 
     updateItem = (e) => {
@@ -22,7 +22,7 @@ class NewItem extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.add(this.state.name, this.state.quantity);
-        this.setState({ name: '', quantity: 1 })
+        this.setState({ name: '', quantity: 0 })
     }
 
     render() {

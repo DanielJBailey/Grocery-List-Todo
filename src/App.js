@@ -12,7 +12,7 @@ class App extends Component {
       {id: 3, name: "Advocado", quantity: "2", bought: false},
       {id: 4, name: "Salmon Filets", quantity: "2", bought: false},
       {id: 5, name:  "Eggs", quantity: "20", bought: false},
-      {id: 5, name:  "Cilantro", quantity: "1", bought: false},
+      {id: 6, name:  "Cilantro", quantity: "1", bought: false},
 
     ]
   }
@@ -34,14 +34,31 @@ class App extends Component {
     }
   }
 
+  boughtItem = (id) => {
+    const { items } = this.state;
+    this.setState({
+      items: items.map( item => {
+        if(item.id === id) {
+          return {
+            ...item, bought: !item.bought
+          }
+        }
+        return item
+      })
+    })
+  }
+
   render() {
     const { items } = this.state;
     return (
       <div className="App">
           <NewItem add={this.addItem}/>
           <div className="notepad">
+            <div className="hole"></div>
+            <div className="hole"></div>
+            <div className="hole"></div>
             <div className="lines"></div>
-            <GroceryList items={items} />
+            <GroceryList items={items} bought={this.boughtItem}/>
           </div>
       </div>
     );

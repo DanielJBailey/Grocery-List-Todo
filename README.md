@@ -1,6 +1,8 @@
 # Grocery List
 A simple grocery list application built using React
 
+[Live](https://danieljbailey.github.io/Grocery-List-Todo/)
+
 ## Goals For Project
 
 * Follow the lecture from today to set up a Grocery List
